@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
+  padding: 50px 0px;
 }
 
 .canvas {
@@ -19,7 +19,37 @@ body {
 }
 
 .controls {
-  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.controls .controls_range {
+  margin-bottom: 30px;
+}
+
+.controls .controls_btns {
+  margin-bottom: 40px;
+}
+
+.controls_btns button {
+  all: unset;
+  cursor: pointer;
+  background-color: white;
+  padding: 5px 0px;
+  width: 80px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  font-weight: 550;
+}
+
+.controls_btns button:active {
+  transform: scale(0.98);
 }
 
 .controls .controls_colors {
