@@ -12,6 +12,8 @@ const INITIAL_COLOR = "#2c2c2c"
 canvas.width = document.getElementsByClassName("canvas")[0].offsetWidth
 canvas.height = document.getElementsByClassName("canvas")[0].offsetHeight
 
+let startX, startY, closeX, closeY
+
 ctx.fillStyle = "white"
 ctx.fillRect(0, 0, canvas.width, canvas.height)
 
@@ -65,9 +67,11 @@ function handleModeClick() {
   }
 }
 
-function handleCanvasClick() {
+function handleCanvasClick(event) {
   if (filling) {
     ctx.fillRect(0, 0, canvas.width, canvas.height)
+  } else if (paintSquare && filling === false) {
+    ctx.strokeRect(event.offsetX, event.offsetY, 50, 50)
   }
 }
 
